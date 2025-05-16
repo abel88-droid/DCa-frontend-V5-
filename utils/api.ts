@@ -1,7 +1,6 @@
 // utils/api.ts
 import axios from "axios";
-
-const API_BASE_URL = "https://your-backend-url.com"; // Replace with your FastAPI backend URL
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL!;
 
 export const getWarnings = async () => {
   const res = await axios.get(`${API_BASE_URL}/warnings`);
